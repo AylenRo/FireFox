@@ -22,5 +22,13 @@ public class AnimationController : MonoBehaviour
         else if(!Input.GetKey("w")){
             animator.SetBool("EstaEnMovimiento", false);
         }
+
+        if(Input.GetKey("space")){
+            animator.SetBool("EstaSaltando", true);
+        }
+        else if(!Input.GetKey("space")){
+            animator.SetBool("EstaSaltando", false);
+        }
+
     }
 }

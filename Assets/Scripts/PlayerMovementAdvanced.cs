@@ -27,8 +27,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
     public LayerMask whatIsGround;
     bool grounded;
 
-    public string variableMovimiento;
-    public string variableSuelo;
+    public Animator animator;
 
     public Transform orientation;
 
@@ -44,7 +43,8 @@ public class PlayerMovementAdvanced : MonoBehaviour
     {
         walking,
         sprinting,
-        air
+        air,
+        idle
     }
 
     private void Start()
@@ -106,16 +106,25 @@ public class PlayerMovementAdvanced : MonoBehaviour
         }
 
         // Mode - Walking
-        else if (grounded)
+        else if (grounded && (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("d") || Input.GetKey("s"))) 
         {
             state = MovementState.walking;
             moveSpeed = walkSpeed;
+            animator.SetBool("EstaEnMovimiento", true);
         }
 
         // Mode - Air
-        else
+        else if(!grounded)
         {
             state = MovementState.air;
+            animator.SetBool("EstaSaltando", true);
+        }
+
+        else
+        {
+            state = MovementState.idle;
+            animator.SetBool("EstaEnMovimiento", false);
+            animator.SetBool("EstaSaltando", false);
         }
     }
 
