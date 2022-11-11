@@ -124,7 +124,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
         {
             state = MovementState.idle;
             animator.SetBool("EstaEnMovimiento", false);
-            animator.SetBool("EstaSaltando", false);
+            //animator.SetBool("EstaSaltando", false);
         }
     }
 
@@ -165,6 +165,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
     }
     private void ResetJump()
     {
+        animator.SetBool("EstaSaltando", false);
         readyToJump = true;
 
     }
