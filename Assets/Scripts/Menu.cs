@@ -7,6 +7,6 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
 public void EscenaJuego(){
-    SceneManager.LoadScene("SampleScene");//Empieza la escena del juego.
+    SceneManager.LoadScene("Mobile");//Empieza la escena del juego.
 }
 }

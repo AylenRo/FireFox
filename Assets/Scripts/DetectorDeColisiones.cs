@@ -24,7 +24,7 @@ public class DetectorDeColisiones : MonoBehaviour
         if(collision.gameObject.tag=="Fuego"){
             
             Vibrate();
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Mobile");
         }
         
     }
