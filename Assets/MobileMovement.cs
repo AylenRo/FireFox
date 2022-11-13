@@ -5,6 +5,7 @@ using TMPro;
 
 public class MobileMovement : MonoBehaviour
 {
+    private SoundManager soundManager;
     [SerializeField]private bl_Joystick Joystick;
 
     [Header("Movement")]
@@ -40,6 +41,12 @@ public class MobileMovement : MonoBehaviour
     Rigidbody rb;
 
     public MovementState state;
+
+    //metodo para el sonido
+    private void Awake()
+    {
+        soundManager = FindObjectOfType<SoundManager>();
+    }
     public enum MovementState
     {
         walking,
@@ -77,15 +84,18 @@ public class MobileMovement : MonoBehaviour
     private void FixedUpdate()
     {
         if(pressed == true){
-            MovePlayer(); 
+            MovePlayer();
+           
         }
     }
 
     public void PressButton(){
         pressed = true;
+        soundManager.SeleccionAudio(1, 3f);
     }
     public void NoPressButton(){
         pressed = false;
+        
     }
 
     private void MyInput()
@@ -97,6 +107,7 @@ public class MobileMovement : MonoBehaviour
             readyToJump = false;
 
             Jump();
+            soundManager.SeleccionAudio(0, 3f);
 
             Invoke(nameof(ResetJump), jumpCooldown);
         }
