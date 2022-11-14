@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour
 {
     public AudioSource sonidoBoton;
 public void EscenaJuego(){
-    SceneManager.LoadScene("Mobile");//Empieza la escena del juego.
+    SceneManager.LoadScene("Mobile", LoadSceneMode.Single);//Empieza la escena del juego.
         sonidoBoton.Play();
     }
 }
