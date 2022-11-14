@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class IrMenu : MonoBehaviour
 {
+    public AudioSource sonidoBoton;
 public void EscenaMenu(){
     SceneManager.LoadScene("Menu");//Se carga la escena Menu
+        sonidoBoton.Play();
 }
 public void EscenaCreditos(){
     SceneManager.LoadScene("Credits");//Se carga la escena Credits
-}
+        sonidoBoton.Play();
+    }
 
 public void Exit(){
    #if UNITY_EDITOR

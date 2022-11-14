@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuMobile : MonoBehaviour
 {
+    public AudioSource botonSonido;
     // Static ya que pertenece solo a esta clase y solo existe una 
     public static bool gameIsPaused = false;
 
@@ -46,17 +47,20 @@ public class PauseMenuMobile : MonoBehaviour
     }
     public void RetryGame()
     {
+      
         Time.timeScale = 1f;
         SceneManager.LoadScene("Mobile");
     }
 
     public void GoToMainMenu()
     {
+        
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
     public void ExitGame()
     {
+      
         Application.Quit();
         UnityEditor.EditorApplication.isPlaying = false;
     }

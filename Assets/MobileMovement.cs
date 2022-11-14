@@ -6,6 +6,8 @@ using TMPro;
 public class MobileMovement : MonoBehaviour
 {
     private SoundManager soundManager;
+    public AudioSource pasos;
+
     [SerializeField]private bl_Joystick Joystick;
 
     [Header("Movement")]
@@ -91,11 +93,12 @@ public class MobileMovement : MonoBehaviour
 
     public void PressButton(){
         pressed = true;
-        soundManager.SeleccionAudio(1, 3f);
+        pasos.volume = 3f;
+        pasos.Play();
     }
     public void NoPressButton(){
         pressed = false;
-        
+        pasos.Pause();
     }
 
     private void MyInput()

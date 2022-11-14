@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DetectorDeColisiones : MonoBehaviour
 {
-    private SoundManager soundManager;
+    public AudioSource choque;
     public Transform respawnPoint;
 
     #if UNITY_ANDROID && !UNITY_EDITOR
@@ -18,15 +18,12 @@ public class DetectorDeColisiones : MonoBehaviour
     public static AndroidJavaObject currentActivity;
     public static AndroidJavaObject vibrator;
 #endif
-    private void Awake()
-    {
-        soundManager = FindObjectOfType<SoundManager>();
-    }
+   
 
     private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.tag=="Fuego"){
-            soundManager.SeleccionAudio(2, 3f);
+            choque.Play();
             Vibrate();
             SceneManager.LoadScene("Mobile");
         }

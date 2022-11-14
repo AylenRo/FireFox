@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 //Se crea la clase Menu
 public class Menu : MonoBehaviour
 {
+    public AudioSource sonidoBoton;
 public void EscenaJuego(){
     SceneManager.LoadScene("Mobile");//Empieza la escena del juego.
-}
+        sonidoBoton.Play();
+    }
 }
