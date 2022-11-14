@@ -65,6 +65,5 @@ public class PauseMenuMobile : MonoBehaviour
     {
         botonSonido.Play();
         Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
     }
  }

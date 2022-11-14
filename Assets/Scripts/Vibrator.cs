@@ -19,10 +19,7 @@ public static class Vibrator
         {
             vibrator.Call("vibrate", millisecond);
         }
-        else
-        {
-            Handheld.Vibrate();
-        }
+        
     }
     public static void Cancel()
     {
