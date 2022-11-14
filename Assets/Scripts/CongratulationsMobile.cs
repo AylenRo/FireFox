@@ -22,7 +22,7 @@ public class CongratulationsMobile : MonoBehaviour
         private void WinGame()
         {
         Cursor.lockState = CursorLockMode.None;
-        SceneManager.LoadScene("Congratulations");
+        SceneManager.LoadScene("Recomendations");
 
     }
 
