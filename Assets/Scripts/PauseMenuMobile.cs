@@ -14,8 +14,10 @@ public class PauseMenuMobile : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            botonSonido.Play();
             if (gameIsPaused)
             {
+                
                 Resume();
             }
             else
@@ -47,20 +49,21 @@ public class PauseMenuMobile : MonoBehaviour
     }
     public void RetryGame()
     {
-      
+
+        botonSonido.Play();
         Time.timeScale = 1f;
         SceneManager.LoadScene("Mobile");
     }
 
     public void GoToMainMenu()
     {
-        
+        botonSonido.Play();
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
     public void ExitGame()
     {
-      
+        botonSonido.Play();
         Application.Quit();
         UnityEditor.EditorApplication.isPlaying = false;
     }
