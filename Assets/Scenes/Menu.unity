@@ -1520,6 +1520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big Rock 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4576947873547679678, guid: dd1832de68cba8f48960216dac3c4f3e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5977549091374805509, guid: dd1832de68cba8f48960216dac3c4f3e, type: 3}
       propertyPath: m_RootOrder
       value: 3
