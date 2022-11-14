@@ -60,7 +60,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AO: 0
-    - _BaseLight: 1
+    - _BaseLight: 0.202
     - _BumpScale: 1
     - _Cutoff: 0.25
     - _DetailNormalMapScale: 1
@@ -70,7 +70,7 @@ Material:
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 1
-    - _Occlusion: 0
+    - _Occlusion: 2.8
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
